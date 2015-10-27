@@ -12,16 +12,6 @@
 class Title : public Mode
 {
 private:
-	enum StageState
-	{
-		MOVE_1,
-		MOVE_2,
-		MOVE_3,
-		MOVE_4,
-	};
-
-	StageState sstate;
-
 	DxFont *DrawFps, *title, *column, *column_italic;
 	DrawTexture *Cursor;
 	
@@ -30,8 +20,6 @@ private:
 	int cursorpos;
 
 	int Count, frame;
-
-	void NextStage( int pos );
 
 public:
 	Title();

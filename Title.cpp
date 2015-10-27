@@ -3,11 +3,11 @@
 #include "Title.h"
 
 Title::Title()
-	:	Mode(), sstate( MOVE_1 )
+	:	Mode()
 {}
 
 Title::Title( Sequence* ptr )
-	:	sstate( MOVE_1 ), Mode( ptr )
+	:	 Mode( ptr )
 {
 	DrawFps = dynamic_cast< DxFont* >( FindObjectBox( "MS_UI_Gothic_16" ) );
 	title = dynamic_cast< DxFont* >( FindObjectBox( "MS_MINCHO_52" ) );
@@ -100,9 +100,4 @@ void Title::update()
 
 
 	SleepFrame();
-}
-
-void Title::NextStage( int pos )
-{
-	obj->RemoveModeObject();
 }
