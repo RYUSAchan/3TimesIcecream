@@ -157,6 +157,9 @@ void Sequence::MainLoop()
 				case MODE_TITLE:
 					Obj = _NEW Title( this );
 					break;
+				case MODE_THREE_TIMES:
+					Obj = _NEW ThreeTimes( this );
+					break;
 				case MODE_END:
 				case MODE_UNKNOWN:
 				default:
@@ -185,9 +188,9 @@ void Sequence::Uninitialize()
 	RELEASE( pSprite );
 	RELEASE( pD3Ddevice );
 	RELEASE( pD3D );
+	ResetObjectBox();
 	Sound::ReleaseDirectSound();
 	CoUninitialize();
-	ResetObjectBox();
 }
 
 void Sequence::SetNextMode( Seq next )

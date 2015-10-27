@@ -78,10 +78,17 @@ void Title::update()
 	if( Input_device->IsKeyPressed( DIK_Z ) ) {
 		if( cursorpos == 0 )
 		{
-			
+			LPVOID p = ( LPVOID )0;
+			obj->SetUserData( p );
+			obj->SetNextMode( Sequence::MODE_THREE_TIMES );
+			obj->RemoveModeObject();
 			return;
 		} else if( cursorpos == 1 )
 		{
+			LPVOID p = ( LPVOID )1;
+			obj->SetUserData( p );
+			obj->SetNextMode( Sequence::MODE_THREE_TIMES );
+			obj->RemoveModeObject();
 			return;
 		} else if ( cursorpos == 2 )
 		{

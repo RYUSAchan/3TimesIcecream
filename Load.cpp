@@ -2,6 +2,7 @@
 
 #include "Load.h"
 #include "Draw.h"
+#include "Sound.h"
 #include <process.h>
 
 BOOL Load::complete = FALSE;
@@ -54,7 +55,7 @@ void Load::LoadThread( void *data )
 	AppendObjectBox( "MS_MINCHO_52", _NEW DxFont( 52, _T( "‚l‚r –¾’©" ), FALSE ) );
 
 	AppendObjectBox( "Cursor", _NEW Texture( _T( "data/cursor.png" ) ) );
-	
+	AppendObjectBox( "3bai", _NEW Sound( _T( "data/3.wav" ) ) );
 
 	complete = TRUE;
 }
