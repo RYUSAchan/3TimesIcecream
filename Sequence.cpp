@@ -63,7 +63,7 @@ BOOL Sequence::Initialize( HINSTANCE hInst, int nCmdShow )
 	wc.hIcon = NULL;
 	wc.hInstance = hInst;
 	wc.lpfnWndProc = CallProc;
-	wc.lpszClassName = _T( "Game" );
+	wc.lpszClassName = _T( "ManyManyIcecream" );
 	wc.lpszMenuName = NULL;
 	wc.style = NULL;
 
@@ -73,7 +73,7 @@ BOOL Sequence::Initialize( HINSTANCE hInst, int nCmdShow )
 
 	SetHWnd( CreateWindow(
 		wc.lpszClassName,
-		_T( "Game2015" ),
+		_T( "ManyManyIcecream" ),
 		WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX,
 		CW_USEDEFAULT, CW_USEDEFAULT, 640, 480,
 		NULL, NULL, hInst, ( LPVOID )this ) );
