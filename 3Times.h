@@ -13,6 +13,9 @@ private:
 
 	Sound *threebai, *Count, *CountDown;
 
+	void Normal();
+	void Random();
+
 public:
 	ThreeTimes();
 	ThreeTimes( Sequence* ptr );

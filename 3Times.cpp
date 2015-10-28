@@ -27,14 +27,26 @@ void ThreeTimes::update()
 {
 	GetFrame();
 	Input_device->GetKeyState();
-	if( Input_device->IsKeyDown( DIK_ESCAPE ) || mode == 1 )
+	if( Input_device->IsKeyDown( DIK_ESCAPE )  )
 	{
 		obj->SetNextMode( Sequence::MODE_END );
 		obj->RemoveModeObject();
 	}
-	if( frame == 0) { CountDown->Play(); }
 
-	frame = ( frame + 1 ) % 180;
+	if( mode == 0 )
+	{
+		Normal();
+	} else {
+		Random();
+	}
 
 	SleepFrame();
 }
+
+void ThreeTimes::Normal()
+{
+
+}
+
+void ThreeTimes::Random()
+{}
