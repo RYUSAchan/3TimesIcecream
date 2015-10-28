@@ -44,9 +44,7 @@ void ThreeTimes::update()
 }
 
 void ThreeTimes::Normal()
-{
-
-}
+{}
 
 void ThreeTimes::Random()
 {}
