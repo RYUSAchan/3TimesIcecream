@@ -15,6 +15,8 @@ ThreeTimes::ThreeTimes( Sequence* ptr )
 	CountDown = _NEW Sound( *dynamic_cast< Sound* >( FindObjectBox( "CountDown" ) ) );
 	title = dynamic_cast< DxFont* >( FindObjectBox( "MS_MINCHO_52" ) );
 	
+	CountDown->SetVolume( -400 );
+	threebai->SetVolume( -800 );
 	mode = mode | 2;
 	frame = 30;
 	n = 0;
