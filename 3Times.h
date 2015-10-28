@@ -9,9 +9,9 @@ class ThreeTimes : public Mode
 {
 private:
 	int mode;
-	int count;
+	int frame;
 
-	Sound* threebai;
+	Sound *threebai, *Count, *CountDown;
 
 public:
 	ThreeTimes();

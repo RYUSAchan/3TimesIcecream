@@ -56,6 +56,8 @@ void Load::LoadThread( void *data )
 
 	AppendObjectBox( "Cursor", _NEW Texture( _T( "data/cursor.png" ) ) );
 	AppendObjectBox( "3bai", _NEW Sound( _T( "data/3.wav" ) ) );
+	AppendObjectBox( "Count", _NEW Sound( _T( "data/Count.wav" ) ) );
+	AppendObjectBox( "CountDown", _NEW Sound( _T( "data/CountDown.wav" ) ) );
 
 	complete = TRUE;
 }

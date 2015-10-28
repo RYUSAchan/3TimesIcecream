@@ -11,12 +11,16 @@ ThreeTimes::ThreeTimes( Sequence* ptr )
 {
 	mode = ( int )obj->GetUserData();
 	threebai = _NEW Sound( *dynamic_cast< Sound* >( FindObjectBox( "3bai" ) ) );
-	count = 0;
+	Count = _NEW Sound( *dynamic_cast< Sound* >( FindObjectBox( "Count" ) ) );
+	CountDown = _NEW Sound( *dynamic_cast< Sound* >( FindObjectBox( "CountDown" ) ) );
+	frame = 0;
 }
 
 void ThreeTimes::Uninit()
 {
 	_DELETE( threebai );
+	_DELETE( Count );
+	_DELETE( CountDown );
 }
 
 void ThreeTimes::update()
@@ -28,9 +32,9 @@ void ThreeTimes::update()
 		obj->SetNextMode( Sequence::MODE_END );
 		obj->RemoveModeObject();
 	}
-	if( count == 0) { threebai->Play(); }
+	if( frame == 0) { CountDown->Play(); }
 
-	count = ( count + 1 ) % 120;
+	frame = ( frame + 1 ) % 180;
 
 	SleepFrame();
 }
